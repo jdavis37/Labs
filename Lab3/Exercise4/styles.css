@@ -1,0 +1,11 @@
+body
+{
+    background-color: rgb(16, 41, 61);
+    color: #ddd;
+    font-family: Helvetica;
+}
+
+.paragraph
+{
+    border: 2px solid white;
+}

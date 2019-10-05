@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mod some words</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".changebtn").click(function(){
+            var newWidth = $(".width").val();
+            $(".paragraph").width(newWidth);
+        });
+    });
+
+    function changeParagraph()
+    {
+        var rgbBack;
+        var rgbBorder;
+        var redBackground = document.getElementById("redBackground").value;
+        var r = Number(redBackground);
+        var greenBackground = document.getElementById("greenBackground").value;
+        var g = Number(greenBackground);
+        var blueBackground = document.getElementById("blueBackground").value;
+        var b = Number(blueBackground);
+
+        var redBorder = document.getElementById("redBorder").value;
+        var rb = Number(redBorder);
+        var greenBorder = document.getElementById("greenBorder").value;
+        var gb = Number(greenBorder);
+        var blueBorder = document.getElementById("blueBorder").value;
+        var bb = Number(blueBorder);
+
+        rgbBack = "rgb(" + r + ","+ g +","+ b + ")";
+        rgbBorder = "rgb(" + rb + ","+ gb +","+ bb + ")";
+        document.getElementById("paragraph").style.backgroundColor = rgbBack;
+        document.getElementById("paragraph").style.borderColor = rgbBorder;
+
+    }
+    </script>
+
+  </head>
+  <body>
+    <div class="paragraph" id="paragraph">
+      “Atticus said to Jem one day,
+         “I’d rather you shot at tin cans in the
+         backyard, but I know you’ll go after birds. 
+         Shoot all the blue jays you want, if you 
+         can hit ‘em, but remember it’s a sin to kill 
+         a mockingbird.” That was the only time I ever 
+         heard Atticus say it was a sin to do something, 
+         and I asked Miss Maudie about it. “Your father’s
+         right,” she said. “Mockingbirds don’t do one thing 
+         except make music for us to enjoy. They don’t eat up 
+         people’s gardens, don’t nest in corn cribs, they 
+         don’t do one thing but sing their hearts out for us. 
+         That’s why it’s a sin to kill a mockingbird.” – 
+         Harper Lee, To Kill a Mockingbird
+        </div><br><br>
+
+        
+         <div class="form-holder">
+
+            <form>
+                
+                <div class="modField">
+                    <label for="width">Width:</label><br>
+                    <input type="text" name="width" class="width" value="0">
+                </div>
+                <br>
+                <div><h3>Enter rgb values from 0-255</h3></div>
+                <div class="modField">
+                    <label for="redBorder">Red Border:</label><br>
+                    <input type="text" name="redBorder" id="redBorder" value="0">
+                </div>
+                <br>
+                <div class="modField">
+                    <label for="greenBorder">Green Border:</label><br>
+                    <input type="text" name="greenBorder" id="greenBorder" value="0">
+                </div>
+                <br>
+                <div class="modField">
+                    <label for="blueBorder">Blue Border:</label><br>
+                    <input type="text" name="blueBorder" id="blueBorder" value="0">
+                </div>
+                <br>
+                <div class="modField">
+                    <label for="redBackground">Red Background:</label><br>
+                    <input type="text" name="redBackground" id="redBackground" value="0">
+                </div>
+                <br>
+                <div class="modField">
+                    <label for="greenBackground">Green Background:</label><br>
+                    <input type="text" name="greenBackground" id="greenBackground" value="0">
+                </div>
+                <br>
+                <div class="modField">
+                    <label for="blueBackground">Blue Background:</label><br>
+                    <input type="text" name="blueBackground" id="blueBackground" value="0">
+                    <br><button type="button" class="changebtn" onclick="changeParagraph();">Change</button><br>
+                </div>
+
+    
+            </form>
+    
+        </div>
+    
+  </body>
+</html>

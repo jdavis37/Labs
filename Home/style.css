@@ -1,0 +1,23 @@
+body
+{
+    background-color: #226699;
+    color: bisque;
+    font-family: 'helvetica';
+}
+#Title{
+    position: relative;
+
+    text-align: center;
+}
+.lab3Links
+{
+text-align: center;
+    color: bisque;
+     position: relative;
+
+}
+
+a:visited
+{
+    color: bisque;
+}

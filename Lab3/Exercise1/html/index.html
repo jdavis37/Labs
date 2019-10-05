@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>PasswordValidator</title>
+    <script type="text/javascript" src="jdscript.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <img id="img" src="images/doge.jpeg" alt="">
+
+    <div class="tutorial-wrapper">
+
+        <form action="#" onsubmit="checkPass();return false">
+
+            <div class="field-wrapper">
+                <label for="password2">Password:</label><br>
+                <input type="password" name="password" id="password2" onclick="message();">
+            </div>
+            <div class="field-wrapper">
+                <label for="confirm2">Confirm Password:</label><br>
+                <input type="password" name="confirm" id="confirm2"><br>
+                <input type="submit" name="validate" value="Validate" /><br>
+                <span id="confirm-message2" class="confirm-message"></span><br>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="message">
+      <h3>Password must contain:</h3>
+      <p>Minimum 8 characters</p>
+      <p>Passwords must match</p>
+    </div>
+
+  </body>
+</html>
