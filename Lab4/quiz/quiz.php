@@ -1,11 +1,7 @@
 <?php
     //access the global array called $_POST to get the values from the text fields
-    /*$name = $_POST["name"];
-    $email = $_POST["email"];
-
-    echo "Name: " . $name . "<br>";
-    echo "Email: " . $email . "<br>";*/
-
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
     $Q1 = "Question 1: You keep getting asked: \"What do the numbers mean?\" What is your name?";
     $Q2 = "Quesition 2: You just found out \"the cake is a lie.\" What game is this?";
     $Q3 = "Question 3: How many timelines are in the Legend of Zelda series?";
@@ -53,14 +49,15 @@
     }
     else if($Grade > 40)
     {
-        echo "meh.";
+        echo "meh.<br><br>";
     }
     else if($Grade > 20)
     {
-        echo "scrub.";
+        echo "scrub.<br><br>";
     }
     else
     {
-        echo "Git Gud.";
+        echo "Git Gud.<br><br>";
     }
+    echo "<a href=\"javascript:history.go(-1)\">GO BACK</a>";
 ?>
