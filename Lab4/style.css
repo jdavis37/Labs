@@ -1,0 +1,18 @@
+body
+{
+    background: #442211;
+    color: white;
+    font-family: helvetica;
+    font-weight: 750;
+}
+
+a:active, :visited 
+{
+    color: white;
+}
+
+.links
+{
+    margin-top: 100px;
+    text-align: center;
+}
