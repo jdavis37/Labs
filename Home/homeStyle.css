@@ -6,6 +6,11 @@ body
     font-weight: 750;
 }
 
+#Title
+{
+    margin-top: 100px;
+    text-align: center;
+}
 a:active, :visited 
 {
     color: white;
