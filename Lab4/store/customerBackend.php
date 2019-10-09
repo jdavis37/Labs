@@ -87,5 +87,10 @@
             font-weight: bolder;
             border-color: #dddddd;
          }
+         body,a
+         {
+             color: white;
+             background: #000;
+         }
         </style>";
 ?>
