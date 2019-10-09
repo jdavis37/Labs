@@ -1,14 +1,14 @@
 body
 {
-    background: #112266;
+    background: #333333;
     color: white;
     font-family: helvetica;
     font-weight: 750;
 }
 
-a:active, :visited 
+a:active, :visited
 {
-    color: white;
+    color: #000000;
 }
 
 .links
