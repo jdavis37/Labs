@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Laurel Crown | Home, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>The Laurel Crown | Home</title>
+</head>
+<body>
+    <div>
+        Purchase you weapons and armor here, Gladiator. <br>
+        Spend well. You won't live long enough to spend it all... <br><br><br>
+    </div>
+
+    <div id="itemsField">
+        <form action="customerBackend.php" method="POST">
+            <div class="block">
+            <img src="images/helmet.png" alt="" id="helmet">
+            <label for="item1">Helmet: $500</label>
+            <input type="text" name="item1" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div class="block">
+            <img src="images/armor.png" alt="" id="armor">
+            <label for="item2">Armor: $700</label>
+            <input type="text" name="item2" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div class="block">
+            <img src="images/shield.png" alt="" id="shield">
+            <label for="item3">Sheild: $250</label>
+            <input type="text" name="item3" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div class="block">
+            <img src="images/sandals.png" alt="" id="sandals">
+            <label for="item4">Sandals: $100</label>
+            <input type="text" name="item4" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div class="block">
+            <img src="images/spatha.png" alt="" id="spatha">
+            <label for="item5">Spatha: $1,200</label>
+            <input type="text" name="item5" class="itemInput" value="0"><br><br>
+             </div>
+
+            <div class="block">
+                <img src="images/rustysword.png" alt="" id="rustysword">
+                <label for="item5">Rusty Swoard: $200</label>
+                <input type="text" name="item6" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div class="block">
+            <img src="images/trident.png" alt="" id="trident">
+            <label for="item6">Trident: $4,000</label>
+            <input type="text" name="item7" class="itemInput" value="0"><br><br>
+             </div>
+
+            <div class="block">
+            <img src="images/mace.png" alt="" id="mace">
+            <label for="item7">Mace: $950</label>
+            <input type="text" name="item8" class="itemInput" value="0"><br><br>
+            </div>
+
+            <div>
+                <div id="Shipping">Shipping method:</div>                
+                <input type="radio" name="shippingMethod" value="Free" required>Free 7 Day<br>
+                <input type="radio" name="shippingMethod" value="OverNight">Overnight: $50.00<br>
+                <input type="radio" name="shippingMethod" value="ThreeDay">Three Day: $5.00<br>
+            </div><br>
+
+            We sell to gladators only. <br><br>
+            <input type="text" name="gladiatorName" placeholder="Name (Username)" required><br><br>
+            <input type="password" name="Password" placeholder="Password" required><br><br>
+            <input type="reset" value="Reset Form">
+
+            <input type="submit" value="Buy"> 
+
+        </form>
+    </div>
+</body>
+</html>

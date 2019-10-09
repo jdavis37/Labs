@@ -1,0 +1,40 @@
+body
+{
+    background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("images/Gladiator.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+img
+{
+    max-width: 75px;
+}
+
+#itemsField
+{
+    background:rgba(83, 78, 71, 0.45);
+    max-width: 500px;
+}
+
+input
+{
+    width: 140px;
+}
+
+label
+{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}​
+
+#itemsField
+{
+    padding-left: 15px;
+}

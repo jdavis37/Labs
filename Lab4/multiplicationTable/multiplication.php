@@ -5,7 +5,19 @@ ini_set("display_errors", 1);
 
 echo "<h2>Enjoy some PHP multiplication!</h2>";
 
-echo "<table border = \"1\" style = border-collapse: collapse'>";
+echo "<style type= 'text/css'> 
+         .multTable 
+         {
+            background: #112255;
+            color: #ffffff;
+            font-family: consolas;
+            font-size: 22;
+            font-weight: bolder;
+            border-color: #dddddd;
+         }
+      </style>";
+
+echo "<table class='multTable' cellpadding = '20' border = \"100\" style = border-collapse: 'collapse'>";
    for ($row=1; $row <= 10; $row++)
    {
       echo "<tr> \n";
