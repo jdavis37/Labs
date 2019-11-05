@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View User Posts</title>
+</head>
+<body>
+    <h1>Administrator Control - View Posts</h1>
+    <h1>Actions: Select user to view posts.</h1>
+    
+    <?php
+        $UserID;
+        $sqlConnect = new mysqli("mysql.eecs.ku.edu", "jarod.davis37", "iec4Ei9y", "jaroddavis37");
+
+        /* check connection */
+        if ($sqlConnect->connect_errno) {
+            printf("Connect failed: %s\n", $sqlConnect->connect_error);
+            exit();
+        }
+        else
+        {
+            echo "Connection made <br>";
+
+            $userQuery = "SELECT * FROM Users";
+
+            if ($result = $sqlConnect->query($userQuery)) 
+            {
+                echo "Select a user: ";
+
+                /*fetch associative array*/ 
+                echo "<form action='ViewUserPosts.php' method='POST'>";
+                    echo "<select name='UserID'>";
+                        while ($row = $result->fetch_assoc()) 
+                        {
+                            echo "<option value='" . $row['user_id'] . "'>" . $row['user_id'] . "</option>";
+                        }
+                    echo "</select><input type='submit'></input>";
+                echo"</form>";
+
+                /* free result set */
+                $result->free();
+            }
+
+        }
+
+
+        /* close connection */
+        $sqlConnect->close();
+    ?>
+    <br><br><a href="admin.html">GO BACK</a>    
+    
+</body>
+</html>
