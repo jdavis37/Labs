@@ -9,15 +9,23 @@ class QueueTester: public Queue
     Queue MyQueue;
 
   public:
-    QueueTester(Queue);
+    QueueTester();
     ~QueueTester();
 
-    void Test1(Queue);
-    void Test2();
-    void Test3();
-    void Test4();
-    void Test5();
-    void Test6();
-
+    void PrintResult(bool result);
+    void TestConstructorEmpty();
+    void TestConstructorPeek();
+    void TestEnqueuePeek();
+    void TestEnqueueEmpty();
+    void TestEnqueueEmptyMultiple();
+    void TestEnqueuePeekMultiple();
+    void TestEnqueuePeekMultiple2();
+    void TestEnqueueEmptyMultiple2();
+    void TestDequeueSingleEmpty();
+    void TestDequeueSinglePeek();
+    void TestDequeueOnEmpty();
+    void TestEnqueueDequeueMultiplePeek();
+    void TestEnqueueDequeueMultipleEmpty();
+    void TestEnqueueDequeueOBO();
 };
 #endif

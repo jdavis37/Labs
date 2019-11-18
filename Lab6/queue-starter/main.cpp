@@ -11,7 +11,6 @@
 
 int main()
 {
-	Queue Q;
-	QueueTester Tester(Q);
+	QueueTester Tester;
 	return(0);
 }
