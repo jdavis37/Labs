@@ -3,6 +3,7 @@
 QueueTester::QueueTester()
 {
   std::cout << "---------------Beginning Queue Test---------------\n\n";
+  std::cout << "-----Please review Report.txt for bug analysis----\n\n";
   TestConstructorEmpty();
   TestConstructorPeek();
   TestEnqueuePeek();
@@ -113,12 +114,12 @@ void QueueTester::TestEnqueuePeekMultiple()
   }
   try
   {
-    if(TestQ.peekFront() == 999)
+    if(TestQ.peekFront() != 0)
     {
-      PrintResult(1);
+      PrintResult(0);
       return;
     }
-    PrintResult(0);
+    PrintResult(1);
   }
   catch(const std::exception& e)
   {
@@ -152,7 +153,7 @@ void QueueTester::TestEnqueuePeekMultiple2()
     TestQ.enqueue(i);
     try
     {
-      if(TestQ.peekFront() != i)
+      if(TestQ.peekFront() != 0)
       {
         PrintResult(0);
         return;
@@ -246,11 +247,11 @@ void QueueTester::TestEnqueueDequeueMultiplePeek()
   }
   try
   {
-    for(int i = 0; i < 500; i++)
+    for(int i = 0; i < 300; i++)
     {
       TestQ.dequeue();
     }
-    if(TestQ.peekFront() != 499)
+    if(TestQ.peekFront() != 300)
     {
       PrintResult(0);
       return;
@@ -305,7 +306,7 @@ void QueueTester::TestEnqueueDequeueOBO()
   {
     for(int i = 0; i < 1000; i++)
     {
-      if(TestQ.peekFront() != (1000-i-1))
+      if(TestQ.peekFront() != (999-(999-i)))
       {
         PrintResult(0);
         return;

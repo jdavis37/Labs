@@ -7,5 +7,8 @@ main.o: main.cpp
 QueueTester.o: QueueTester.cpp
 	g++ -g -std=c++11 -c QueueTester.cpp
 
+leak:
+		valgrind --show-leak-kinds=all -v ./QueueDemo
+
 clean:
 	rm main.o QueueDemo QueueTester.o 

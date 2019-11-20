@@ -1,0 +1,32 @@
+After running a series of tests, possible bugs include:
+
+1)  The most likely case is that enqueue() is inserting values in reverse order, meaning that the first 
+    element of the queue is the last item enqueued rather than the first. This would follow LIFO and not
+    FIFO procedure. This causes dequeue() to remove the last values first, rather than the first value. 
+    This also causes peekFront() to return the last integer enqueued rather than the first.
+
+2)  Less likely is that as integers are enqueued m_front follows the last ineger inserted, simply performing
+    the job of m_back. We have no function to peek back so we cannot be sure. This would require dequeue to 
+    also work in reverse order and traverse backwards through the queue if m_front is taking the role of 
+    m_back. For this reason it seems less likely. If the queue class was designed to have dequque work in 
+    reverse... there's a bigger problem than a simple bug...
+
+3)  The destructor may not be working correctly. After running valgrind, here are the results:
+
+    ==594== HEAP SUMMARY:
+    ==594==     in use at exit: 67,264 bytes in 4,204 blocks
+    ==594==   total heap usage: 6,014 allocs, 1,810 frees, 173,494 bytes allocated
+    ==594==
+    ==594== Searching for pointers to 4,204 not-freed blocks
+    ==594== Checked 111,624 bytes
+    ==594==
+    ==594== LEAK SUMMARY:
+    ==594==    definitely lost: 128 bytes in 8 blocks       <-------***MEMORY LEAKS PRESENT AT END OF PROGRAM***
+    ==594==    indirectly lost: 67,136 bytes in 4,196 blocks
+    ==594==      possibly lost: 0 bytes in 0 blocks
+    ==594==    still reachable: 0 bytes in 0 blocks
+    ==594==         suppressed: 0 bytes in 0 blocks
+    ==594== Rerun with --leak-check=full to see details of leaked memory
+    ==594==
+    ==594== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+    ==594== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
